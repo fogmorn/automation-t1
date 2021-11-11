@@ -1,7 +1,7 @@
 FROM nginx:latest
 EXPOSE 80
 
-RUN mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf_DISABLED \
+RUN mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf_DISABLED; \
   mkdir -p /var/www/html/site
 
 COPY ./front1/nginx_conf/* /etc/nginx/conf.d/
