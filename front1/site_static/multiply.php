@@ -1,8 +1,8 @@
 <?php
-if (isset($_POST['first']) && isset($_POST['second'])) {
+if (isset($_GET['first']) && isset($_GET['second'])) {
  
-    $num1 = $_POST['first'];
-    $num2 = $_POST['second'];
+    $num1 = $_GET['first'];
+    $num2 = $_GET['second'];
     $result = $num1 * $num2;
     
     echo $result . "<br />";
