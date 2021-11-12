@@ -7,12 +7,18 @@ services:
       context: ./front1
     ports:
       - 80:80
+    volumes:
+      - type: volume
+        source: front1www
+        target: /var/www/html/site
   back1:
     container_name: "back1-${BUILD_NUMBER}"
     build:
       context: ./back
     ports:
       - "9000"
+    volumes:
+      - front1www:/var/www/html
     command: php -S="0.0.0.0:9000" -t="/var/www/html"
   back2:
     container_name: "back2-${BUILD_NUMBER}"
@@ -20,4 +26,9 @@ services:
       context: ./back
     ports:
       - "9001"
+    volumes:
+      - front1www:/var/www/html
     command: php -S="0.0.0.0:9001" -t="/var/www/html"
+
+volumes:
+  front1www:
