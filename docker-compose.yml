@@ -12,4 +12,4 @@ services:
         target: /var/www/html/site
 
 volumes:
-  front1www
+  front1www:
