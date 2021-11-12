@@ -8,6 +8,5 @@ if (isset($_GET['first']) && isset($_GET['second'])) {
     echo $result . "<br />";
     echo $_SERVER['SERVER_NAME'] . "<br />";
     echo $_SERVER['SERVER_ADDR'];
-
 }
 ?>
