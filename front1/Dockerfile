@@ -6,3 +6,5 @@ RUN mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf_DISABLED; \
 
 COPY ./nginx_conf/* /etc/nginx/conf.d/
 COPY --chown=root:nginx ./site_static/* /var/www/html/site/
+COPY --chown=root:nginx ./site_static/multiply.php /var/www/html/site/
+COPY --chown=root:nginx ./site_static/add.php /var/www/html/site/
