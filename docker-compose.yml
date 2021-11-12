@@ -6,3 +6,10 @@ services:
       context: ./front1
     ports:
       - 80:80
+    volumes:
+      - type: volume
+        source: front1www
+        target: /var/www/html/site
+
+volumes:
+  front1www
