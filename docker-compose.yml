@@ -18,8 +18,8 @@ services:
     ports:
       - "9000"
     volumes:
-      - front1www1:/var/www/html
-    command: php -S="0.0.0.0:9000" -t="/var/www/html"
+      - front1www1:/var/www/html/site
+    command: php -S="0.0.0.0:9000" -t="/var/www/html/site"
   back2:
     container_name: "back2-${BUILD_NUMBER}"
     build:
@@ -27,8 +27,8 @@ services:
     ports:
       - "9001"
     volumes:
-      - front1www1:/var/www/html
-    command: php -S="0.0.0.0:9001" -t="/var/www/html"
+      - front1www1:/var/www/html/site
+    command: php -S="0.0.0.0:9001" -t="/var/www/html/site"
 
 volumes:
   front1www1:
