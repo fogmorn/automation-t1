@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   front1:
+    container_name: front1:${BUILD_NUMBER}
     build:
       context: ./front1
     ports:
@@ -11,7 +12,7 @@ services:
         source: front1www
         target: /var/www/html/site
   back1:
-    container_name: back1
+    container_name: back1:${BUILD_NUMBER}
     build:
       context: ./back
     ports:
@@ -20,7 +21,7 @@ services:
       - front1www:/var/www/html
     command: php -S="0.0.0.0:9000" -t="/var/www/html"
   back2:
-    container_name: back2
+    container_name: back2:${BUILD_NUMBER}
     build:
       context: ./back
     ports:
