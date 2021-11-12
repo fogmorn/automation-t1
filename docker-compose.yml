@@ -15,19 +15,19 @@ services:
     build:
       context: ./back
     ports:
-      - 9000:3000
+      - "9000"
     volumes:
       - front1www:/var/www/html
-    command: php -S="0.0.0.0:3000" -t="/var/www/html"
+    command: php -S="0.0.0.0:9000" -t="/var/www/html"
   back2:
     container_name: back2
     build:
       context: ./back
     ports:
-      - 9001:3000
+      - "9001"
     volumes:
       - front1www:/var/www/html
-    command: php -S="0.0.0.0:3000" -t="/var/www/html"
+    command: php -S="0.0.0.0:9001" -t="/var/www/html"
 
 volumes:
   front1www:
