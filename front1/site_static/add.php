@@ -7,5 +7,6 @@ if (isset($_GET['first']) && isset($_GET['second'])) {
     
     echo $result . "<br />";
     echo 'Hostname: \'' . $_ENV["HOSTNAME"] . '\'';
+    echo 'Hostname: \'' . getenv("HOSTNAME") . '\'';
 }
 ?>
