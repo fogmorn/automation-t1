@@ -1,7 +1,6 @@
 FROM nginx:latest
 
-RUN rm /etc/nginx/conf.d/default.conf; \
-  echo 0 > /proc/sys/kernel/yama/ptrace_scope
+RUN rm /etc/nginx/conf.d/default.conf
 
 COPY --chown=root:nginx ./site_static/multiply.php /var/www/html/site/
 COPY --chown=root:nginx ./site_static/add.php /var/www/html/site/
