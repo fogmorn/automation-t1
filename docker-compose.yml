@@ -10,7 +10,7 @@ services:
       - 80:80
     volumes:
       - type: volume
-        source: front1www1
+        source: front1www2
         target: /var/www/html/site
   back1:
     container_name: "back1-${BUILD_NUMBER}"
@@ -21,7 +21,7 @@ services:
     ports:
       - "9000"
     volumes:
-      - front1www1:/var/www/html/site
+      - front1www2:/var/www/html/site
     command: php-fpm -F
   back2:
     container_name: "back2-${BUILD_NUMBER}"
@@ -32,8 +32,8 @@ services:
     ports:
       - "9001"
     volumes:
-      - front1www1:/var/www/html/site
+      - front1www2:/var/www/html/site
     command: php-fpm -F
 
 volumes:
-  front1www1:
+  front1www2:
