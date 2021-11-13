@@ -21,7 +21,7 @@ services:
       - "9000"
     volumes:
       - front1www1:/var/www/html/site
-    command: php -S="0.0.0.0:9000" -t="/var/www/html/site"
+    command: php-fpm -y /usr/local/etc/php-fpm.conf
   back2:
     container_name: "back2-${BUILD_NUMBER}"
     privileged: true
