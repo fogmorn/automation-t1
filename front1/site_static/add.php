@@ -6,7 +6,6 @@ if (isset($_GET['first']) && isset($_GET['second'])) {
     $result = $num1 + $num2;
     
     echo $result . "<br />";
-    echo $_SERVER['SERVER_NAME'] . "<br />";
-    echo $_SERVER['SERVER_ADDR'];
+    echo $_ENV['HOSTNAME'];
 }
 ?>
