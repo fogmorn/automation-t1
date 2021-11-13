@@ -6,6 +6,6 @@ if (isset($_GET['first']) && isset($_GET['second'])) {
     $result = $num1 + $num2;
     
     echo $result . "<br />";
-    echo $_ENV['HOSTNAME'];
+    echo 'Hostname: \'' . $_ENV["HOSTNAME"] . '\'';
 }
 ?>
