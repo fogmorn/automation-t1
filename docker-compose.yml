@@ -3,6 +3,7 @@ version: "3.9"
 services:
   front1:
     container_name: "front1-${BUILD_NUMBER}"
+    privileged: true
     build:
       context: ./front1
     ports:
@@ -13,6 +14,7 @@ services:
         target: /var/www/html/site
   back1:
     container_name: "back1-${BUILD_NUMBER}"
+    privileged: true
     build:
       context: ./back
     ports:
@@ -22,6 +24,7 @@ services:
     command: php -S="0.0.0.0:9000" -t="/var/www/html/site"
   back2:
     container_name: "back2-${BUILD_NUMBER}"
+    privileged: true
     build:
       context: ./back
     ports:
