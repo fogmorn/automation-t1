@@ -7,7 +7,7 @@ services:
     build:
       context: ./front1
     ports:
-      - 80:80
+      - "9180:80"
     volumes:
       - type: volume
         source: front1www5
