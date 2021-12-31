@@ -44,3 +44,11 @@
 
 ### Конечный результат
 ![automation-t1_result](https://user-images.githubusercontent.com/49227124/147823885-0cf63be1-82cb-443a-addc-d64dcbf6ac6c.png)
+
+<details><summary>Проверка подключения Jenkins и GitHub</summary>
+  <img src="https://user-images.githubusercontent.com/49227124/147824412-368f0660-3e06-4105-8546-df003a501911.png" alt="Jenkins_github_test_connection"/>
+</details>
+
+<details><summary>Настройка команд в Jenkins</summary>
+  <img src="https://user-images.githubusercontent.com/49227124/147825099-c25b113b-361a-461c-a7e0-fa4812edfef8.png" alt="Jenkins_job_shell_cmd_docker" /img>
+</details>
